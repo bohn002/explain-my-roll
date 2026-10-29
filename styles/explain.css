@@ -1,0 +1,7 @@
+/* Dice explainer on Alien RPG roll cards (the cards are dark, so use bright text) */
+.emr-explain { margin-top: 8px; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 15px; line-height: 1.4; border: 1px solid #ffb000; padding: 4px 8px; color: #f2f2f2; }
+.emr-explain summary { cursor: pointer; font-size: 17px; font-weight: 800; color: #ffb000; text-shadow: 0 0 4px rgba(0, 0, 0, 0.8); }
+.emr-explain.fine summary { color: #7dff8a; }
+.emr-explain.bad summary, .emr-explain.warn summary { color: #ff8a7a; }
+.emr-explain ul { margin: 6px 0 2px; padding-left: 18px; font-weight: 600; }
+.emr-explain li { margin-bottom: 3px; }
