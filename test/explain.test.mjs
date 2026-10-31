@@ -20,6 +20,8 @@ test("fail and panic", () => {
   assert.equal(explainCard(card({n: 3, sixes: 0}, null)).tone, "bad");
   const panic = explainCard(card({n: 3, sixes: 1}, {n: 2, ones: 1, sixes: 0}));
   assert.equal(panic.tone, "warn");
+  assert.match(panic.headline, /but PANIC/);
+  assert.ok(panic.lines.some((l) => /shows a 1/.test(l)));
   assert.ok(panic.lines.some((l) => /Panic/.test(l)));
 });
 

@@ -24,14 +24,15 @@ export function explainCard(card) {
   }
 
   let tone = sixes ? "fine" : "bad";
-  const headline = sixes ? `SUCCESS: ${plural(sixes, "six", "sixes")}` : "FAIL: no sixes";
+  let headline = sixes ? `SUCCESS: ${plural(sixes, "six", "sixes")}` : "FAIL: no sixes";
   lines.push(sixes ? "One 6 is enough to succeed at most actions." : "You need at least one 6 on any die to succeed.");
   if (sixes > 1) lines.push(`Each extra 6 beyond the first is a stunt: ${sixes - 1} to spend on a bonus effect. ${STUNT_EXAMPLES}`);
 
   if (stress && stress.n > 0) {
     if (stress.ones > 0) {
       tone = "warn";
-      lines.push(`${plural(stress.ones, "stress die", "stress dice")} show a 1 (facehugger): you must make a Panic roll.`);
+      headline += ", but PANIC";
+      lines.push(`${plural(stress.ones, "stress die", "stress dice")} ${stress.ones === 1 ? "shows" : "show"} a 1 (facehugger): you must make a Panic roll.`);
     } else {
       lines.push("No 1s on the yellow stress dice, so no Panic roll.");
     }
