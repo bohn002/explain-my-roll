@@ -1,10 +1,20 @@
 # Explain My Roll
 
-A tiny [Foundry VTT](https://foundryvtt.com) (v13–14) module for the **Alien RPG** system, made for tables where everyone is new to the rules.
+A tiny [Foundry VTT](https://foundryvtt.com) (v13–14) module that explains dice rolls in plain words, made for tables where everyone is new to the rules.
+
+## Supported systems
+
+| System | What it explains | Tested |
+|---|---|---|
+| **Alien RPG** | successes and stunts, stress 1s and Panic, pushing, supply rolls | Yes, in Foundry 14 |
+| **D&D 5e** (v6) | attacks (hit/miss, crits, natural 1), checks and saves, advantage and disadvantage, death saves, initiative, damage and crits | Unit tests only, not yet in a live 5e world |
+| **Dragonbane** (v4) | roll-under result, Dragon and Demon, banes and boons, pushing | Unit tests only, not yet in a live Dragonbane world |
+
+On any other system it does nothing. Want yours added? See the roadmap below.
 
 <p align="center"><img src="docs/images/roll-card.png" alt="An Alien RPG roll card with the explanation opened: success with 2 sixes, but PANIC" width="220"></p>
 
-Under every roll card in chat it adds a collapsible **"What does this mean?"** line that says, in plain words, what the dice did:
+Under every roll card in chat it adds a collapsible **"What does this mean?"** line that says, in plain words, what the dice did. For example, on the Alien RPG:
 
 - **Success or fail**, and why one 6 is enough.
 - **Stunts**: each extra 6 beyond the first, with a few examples of what to spend them on.
@@ -29,7 +39,7 @@ Then enable **Explain My Roll** in your world. Requires Foundry v13 or v14 and t
 
 ## Roadmap
 
-- **More systems.** Right now it only understands the Alien RPG system. The plan is to add the other popular ones (Year Zero siblings like Forbidden Lands, then D&D 5e, Pathfinder 2e and Call of Cthulhu). Each needs its own reader for that system's chat cards plus accurate rules text.
+- **More systems.** Next candidates are Year Zero siblings (Forbidden Lands, Mutant Year Zero), Pathfinder 2e and Call of Cthulhu. Each needs its own reader for that system's chat cards plus accurate rules text, and a live world of that system to test in.
 
 ## Notes
 
